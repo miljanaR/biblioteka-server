@@ -1,0 +1,52 @@
+INSERT INTO `biblioteka`.`fakultet`  (naziv_fakulteta) VALUES ('FON'); 
+INSERT INTO `biblioteka`.`fakultet` (`naziv_fakulteta`) VALUES ('ETF'); 
+INSERT INTO `biblioteka`.`fakultet` (`naziv_fakulteta`) VALUES ('MATF'); 
+INSERT INTO `biblioteka`.`fakultet` (`naziv_fakulteta`) VALUES ('RAF'); 
+
+INSERT INTO `biblioteka`.`grad` (`postanski_broj`, `naziv_grada`) VALUES ('18300', 'Pirot'); 
+INSERT INTO `biblioteka`.`grad` (`postanski_broj`, `naziv_grada`) VALUES ('11000', 'Beograd');
+INSERT INTO `biblioteka`.`grad` (`postanski_broj`, `naziv_grada`) VALUES ('18000', 'Nis'); 
+INSERT INTO `biblioteka`.`grad` (`postanski_broj`, `naziv_grada`) VALUES ('21000', 'Novi Sad');
+INSERT INTO `biblioteka`.`grad` (`postanski_broj`, `naziv_grada`) VALUES ('34000', 'Kragujevac'); 
+
+
+INSERT INTO `biblioteka`.`jezik` (`id_jezik`, `naziv_jezika`) VALUES ('1', 'srb');
+INSERT INTO `biblioteka`.`jezik` (`id_jezik`, `naziv_jezika`) VALUES ('2', 'eng');
+
+INSERT INTO `biblioteka`.`publikacija` (`isbn`, `autor`, `godina_izdanja`, `naziv_publikacije`, `jezik_id_jezik`) VALUES ('123', 'Tisma', '1980', 'Upotreba coveka', '1'); 
+INSERT INTO `biblioteka`.`publikacija` (`isbn`, `autor`, `godina_izdanja`, `naziv_publikacije`, `jezik_id_jezik`) VALUES ('124', 'Bruce Eckel', '2007', 'Misliti na javi', '1'); 
+INSERT INTO `biblioteka`.`publikacija` (`isbn`, `autor`, `godina_izdanja`, `naziv_publikacije`, `jezik_id_jezik`) VALUES ('125', 'Bert Bates', '2012', 'Head First Java', '2'); 
+INSERT INTO `biblioteka`.`publikacija` (`isbn`, `autor`, `godina_izdanja`, `naziv_publikacije`, `jezik_id_jezik`) VALUES ('978-86-7991-372-2' , ' James F. Kurose, Keith W. Ross' ,'2014', 'Umrezavanje racunara od vrha ka dnu', '1'); 
+INSERT INTO `biblioteka`.`publikacija` (`isbn`, `autor`, `godina_izdanja`, `naziv_publikacije`, `jezik_id_jezik`) VALUES ('86-7991-281-6', 'Chris Fehily', '2005', 'SQL Bukvar za nestrpljive', '1'); 
+INSERT INTO `biblioteka`.`publikacija` (`isbn`, `autor`, `godina_izdanja`, `naziv_publikacije`, `jezik_id_jezik`) VALUES ('978-86-7991-380-7', 'Matt Neuburg', '2015', 'iOS 8 Osnove programiranja sa Swiftom', '1'); 
+INSERT INTO `biblioteka`.`publikacija` (`isbn`, `autor`, `godina_izdanja`, `naziv_publikacije`, `jezik_id_jezik`) VALUES ('978-0596007126', 'Kathy Sierra, Bert Bates, Elisabeth Robson, Eric Freeman', '2004', 'Head First Design Patterns', '2'); 
+
+
+INSERT INTO `biblioteka`.`primerak` (`datum_stampe`, `za_izdavanje`, `publikacija_isbn`) VALUES ('2009-08-26 19:24:16', '1', '123'); 
+INSERT INTO `biblioteka`.`primerak` (`datum_stampe`, `za_izdavanje`, `publikacija_isbn`) VALUES ('2015-08-08 19:24:44', '1', '123'); 
+INSERT INTO `biblioteka`.`primerak` (`datum_stampe`, `za_izdavanje`, `publikacija_isbn`) VALUES ('2013-08-14 19:25:25', '1', '124'); 
+INSERT INTO `biblioteka`.`primerak` (`datum_stampe`, `za_izdavanje`, `publikacija_isbn`) VALUES ('2016-06-19 19:25:50', '1', '124'); 
+INSERT INTO `biblioteka`.`primerak` (`datum_stampe`, `za_izdavanje`, `publikacija_isbn`) VALUES ('2017-07-30 20:12:18', '1', '125'); 
+INSERT INTO `biblioteka`.`primerak` (`datum_stampe`, `za_izdavanje`, `publikacija_isbn`) VALUES ('2016-08-01 20:12:47', '1', '125'); 
+
+INSERT INTO `biblioteka`.`primerak` (`datum_stampe`, `za_izdavanje`, `publikacija_isbn`) VALUES ('2014-07-30 20:12:18', '1', '978-86-7991-372-2'); 
+INSERT INTO `biblioteka`.`primerak` (`datum_stampe`, `za_izdavanje`, `publikacija_isbn`) VALUES ('2016-08-01 20:12:47', '1', '978-86-7991-372-2'); 
+
+
+
+INSERT INTO `biblioteka`.`primerak` (`datum_stampe`, `za_izdavanje`, `publikacija_isbn`) VALUES ('2005-09-05 23:19:17', '1', '86-7991-281-6'); 
+INSERT INTO `biblioteka`.`primerak` (`datum_stampe`, `za_izdavanje`, `publikacija_isbn`) VALUES ('2006-03-04 23:19:25', '1', '86-7991-281-6'); 
+INSERT INTO `biblioteka`.`primerak` (`datum_stampe`, `za_izdavanje`, `publikacija_isbn`) VALUES ('2019-09-02 23:19:38', '1', '86-7991-281-6'); 
+INSERT INTO `biblioteka`.`primerak` (`datum_stampe`, `za_izdavanje`, `publikacija_isbn`) VALUES ('2015-08-09 23:31:31', '1', '978-86-7991-380-7'); 
+INSERT INTO `biblioteka`.`primerak` (`datum_stampe`, `za_izdavanje`, `publikacija_isbn`) VALUES ('2018-08-09 23:31:31', '1', '978-86-7991-380-7'); 
+INSERT INTO `biblioteka`.`primerak` (`datum_stampe`, `za_izdavanje`, `publikacija_isbn`) VALUES ('2005-09-03 23:32:41', '1', '978-0596007126'); 
+INSERT INTO `biblioteka`.`primerak` (`datum_stampe`, `za_izdavanje`, `publikacija_isbn`) VALUES ('2010-06-10 23:32:57', '1', '978-0596007126'); 
+INSERT INTO `biblioteka`.`primerak` (`datum_stampe`, `za_izdavanje`, `publikacija_isbn`) VALUES ('2015-09-06 23:33:08', '1', '978-0596007126'); 
+
+INSERT INTO `users` (`datum_rodjenja`, `ime_prezime`, `password`, `role`, `username`, `fakultet_id_fakultet`, `grad_postanski_broj`, `br_otkazanih`) VALUES ('1995-03-16 01:00:00', 'Miljana Ratkov', '$2a$10$slt3OY8qKgkkFQi9b6MVveIhZnlloBYpR/kG0tosP4mOkPl4VT2zO', 'ADMIN', 'milja@gmail.com', 1, 18300, 0);
+INSERT INTO `users` (`datum_rodjenja`, `ime_prezime`, `password`, `role`, `username`, `fakultet_id_fakultet`, `grad_postanski_broj`, `br_otkazanih`) VALUES ('1993-06-02 01:00:00', 'Dusan Zivkovic', '$2a$10$oavLlSyfDe.MbGk8sh5aJu35Bibtj49H.OGDmVeJ9Kq4WNe4e5lYi', 'USER', 'm.ratkov995@gmail.com', 1, 18300, 0);
+
+INSERT INTO `biblioteka`.`obavestenje` (`id`) VALUES ('2'); 
+UPDATE `biblioteka`.`obavestenje` SET `datum` = '2019-08-28 14:28:31' WHERE `id` = '2'; 
+UPDATE `biblioteka`.`obavestenje` SET `tekst` = 'Rrezervacija [ broj: 2 ] , clan [ ime i prezime: Dusan Zivkovic, clanski broj: 2 ] istice uskoro.' WHERE `id` = '2'; 
+UPDATE `biblioteka`.`obavestenje` SET `tip` = 'Obavestenje o skorasnjem isteku roka rezervacije' , `user_id_korisnika` = '2' WHERE `id` = '2'; 
